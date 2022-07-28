@@ -1,7 +1,11 @@
 /* Q1 Using a subquery, find the names of all the tracks for the album "Californication"*/
 
+```ruby
+
 SELECT TrackId, AlbumId, Name 
 FROM Tracks WHERE AlbumId
 IN (Select AlbumId 
 FROM Albums
 WHERE Title= 'Californication');
+
+```
