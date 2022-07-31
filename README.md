@@ -1,5 +1,5 @@
 # SQL_Repo-Assignments
-Coursera.org - SQL Assignments
+Coursera.org - SQL for Data Science Course Assignments
 
 All of the questions in this assignment refer to the open source Chinook Database. 
 
