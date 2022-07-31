@@ -61,7 +61,6 @@ Output 2 --------------------------
 
 
 
-
 /* Q3 Profiling the Customers table, answer the following question. */
 
 
@@ -96,7 +95,6 @@ Output 3 --------------------------
 
 
 
-
 /* Q4 Find the cities with the most customers and rank in descending order. */
 
 SELECT C.City, COUNT(C.CustomerId)
@@ -111,7 +109,6 @@ ORDER BY COUNT(C.CustomerId) DESC
 
 
 Output 4 --------------------------
-
 
 +---------------+---------------------+
 | City          | COUNT(C.CustomerId) |
@@ -147,6 +144,7 @@ Output 4 --------------------------
 
 
 
+
 /* Q5 Create a new customer invoice id by combining a customer’s invoice id with their first and last name while ordering your query in the following order: 
       firstname, lastname, and invoiceID.
       Select all of the correct "AstridGruber" entries that are returned in your results below. Select all that apply.*/
@@ -164,7 +162,6 @@ c.FirstName || c.LastName || i.invoiceID AS ID
 FROM (Customers c INNER JOIN Invoices i ON c.customerid=i.customerid)
 
 WHERE FirstName = 'Astrid'
-
 
 
 
