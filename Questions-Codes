@@ -29,8 +29,10 @@ Output 1 --------------------------
 (Output limit exceeded, 10 of 15 total rows shown)
 
 
+
 /* Q2 Find the total number of invoices for each customer along with the customer's full name, city and email.
    After running the query described above, what is the email address of the 5th person, František Wichterlová? */
+
 
 SELECT Inv.CustomerId,
 
@@ -63,6 +65,7 @@ Output 2 --------------------------
 +------------+-----------+-------------+--------+--------------------------+
 
 
+
 /* Q3 Retrieve the track name, album, artistID, and trackID for all the albums. 
 What is the song title of trackID 12 from the "For Those About to Rock We Salute You" album? */
 
@@ -80,6 +83,8 @@ INNER JOIN Tracks AS Tra ON Tra.AlbumId = Alb.AlbumId
 
 WHERE TrackId = 12;
 
+
+
 Output 3 --------------------------
 
 +--------------------+---------------------------------------+----------+---------+
@@ -87,6 +92,9 @@ Output 3 --------------------------
 +--------------------+---------------------------------------+----------+---------+
 | Breaking The Rules | For Those About To Rock We Salute You |        1 |      12 |
 +--------------------+---------------------------------------+----------+---------+
+
+
+
 
 /* Q4 Retrieve a list with the managers last name, and the last name of the employees who report to him or her. */
 
@@ -99,6 +107,8 @@ FROM Employees M
 INNER JOIN Employees E 
 
 ON M.EmployeeId = E.ReportsTo;
+
+
 
 Output 4 --------------------------
 
@@ -114,6 +124,8 @@ Output 4 --------------------------
 | Mitchell | Callahan |
 +----------+----------+
 
+
+
 /* Q5 Find the name and ID of the artists who do not have albums. */
 
 SELECT Art.ArtistId,
@@ -127,6 +139,8 @@ FROM Artists AS Art LEFT JOIN Albums AS Alb
 ON Art.ArtistId = Alb.ArtistId
 
 WHERE Alb.Title IS NULL
+
+
 
 Output 5 --------------------------
 
@@ -146,6 +160,8 @@ Output 5 --------------------------
 +----------+----------------------------+-------+
 (Output limit exceeded, 10 of 71 total rows shown)
 
+
+
 /* Q6 Use a UNION to create a list of all the employee's and customer's first names and last names ordered by the last name in descending order. */
 
 SELECT LastName, FirstName
@@ -159,6 +175,8 @@ SELECT LastName, FirstName
 FROM Customers
 
 ORDER BY LastName DESC;
+
+
 
 Output 6 --------------------------
 
@@ -177,6 +195,8 @@ Output 6 --------------------------
 | Smith        | Jack      |
 +--------------+-----------+
 (Output limit exceeded, 10 of 67 total rows shown)
+
+
 
 /* Q7 See if there are any customers who have a different city listed in their billing city versus their customer city. */
 
@@ -197,6 +217,8 @@ ON C.CustomerId=I.CustomerId
 Group By C.CustomerId
 
 Having C.City<>I.BillingCity
+
+
 
 Output 7 --------------------------
 
