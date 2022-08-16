@@ -1,6 +1,6 @@
 # SQL_Repo-Assignments
 
-Coursera.org - SQL for Data Science Course Assignments (Level 1-2-3)
+Coursera.org - SQL for Data Science Course Assignments (Levels 1-2-3)
 
 All of the questions in this assignment refer to the open source Chinook Database. 
 
